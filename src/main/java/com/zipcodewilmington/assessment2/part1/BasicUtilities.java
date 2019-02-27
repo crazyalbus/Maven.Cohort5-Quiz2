@@ -34,9 +34,3 @@ public class BasicUtilities {
         return stringToTest.substring(0,1).equalsIgnoreCase(letterToTest.toString());
     }
 }
-
-
-//* Create a class `BasicUtilities` which evaluates integers with relational operators.
-//        * `isGreaterThan5` should return `true` if the input is more than `5`, else false.
-//        * `isLessThan7` should return `true` if the input is less than `7`, else false.
-//        * `IsBetween5And7` should return `true` if the input is less than `7` and more than 5, else false.
