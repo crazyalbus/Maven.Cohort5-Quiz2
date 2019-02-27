@@ -13,20 +13,19 @@ public class IntegerArrayUtilities{
     }
 
     public Integer[] range(int start, int stop) {
-//        List<Integer> rangeArray = new ArrayList<>();
-//
-//        for (int i = start; i <= stop ; i++) {
-//            rangeArray.add(start);
-//        }
-//
-////        Integer[] rangeArray = new Integer[Math.abs((start - stop) + 1)];
-////
-////        for (int i = 1; i <= stop + 1 ; i++) {
-////            tempArray[i] = i;
-////        }
-//        Integer[] rangeToReturn = (Integer[]) rangeArray.toArray();
+        List<Integer> rangeArray = new ArrayList<>();
 
-        return null;
+        for (int i = start; i <= stop ; i++) {
+            rangeArray.add(i);
+        }
+
+        Integer[] rangeToReturn = new Integer[rangeArray.size()];
+
+        for (int j = 0; j < rangeArray.size(); j++) {
+            rangeToReturn[j] = rangeArray.get(j);
+        }
+
+        return rangeToReturn;
     }
 
     public Integer getSumOfFirstTwo(Integer[] arrayToTest) {
