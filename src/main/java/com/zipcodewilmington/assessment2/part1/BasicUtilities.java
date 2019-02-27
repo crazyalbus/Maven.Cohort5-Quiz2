@@ -25,11 +25,13 @@ public class BasicUtilities {
     }
 
     public Boolean isBetween5And7(Integer valueToEvaluate) {
-        return null;
+
+        return isGreaterThan5(valueToEvaluate) && isLessThan7(valueToEvaluate);
     }
 
     public Boolean startsWith(String string, Character character) {
-        return null;
+
+        return stringToTest.substring(0,1).equals(letterToTest.toString());
     }
 }
 
