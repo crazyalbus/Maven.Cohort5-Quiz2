@@ -17,3 +17,8 @@ public class IntegerArrayUtilities {
         return null;
     }
 }
+
+
+//* Create a class `IntegerArrayUtilities`
+//        * `hasEvenLength` should return `true` if the input array has an even length.
+//        * `range` should return an array of integers from `start` to `stop` inclusively.
