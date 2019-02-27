@@ -23,7 +23,19 @@ public class ArrayUtility {
 
     public Integer[] rotate(Integer[] array, Integer index) {
 
-        return null;
+        List<Integer> fromNewStart = new ArrayList<Integer>();
+
+        for (int i = index; i < array.length; i++) {
+            fromNewStart.add(array[i]);
+        }
+
+        for (int i = 0; i < index; i++) {
+            fromNewStart.add(array[i]);
+        }
+
+        Integer[] returnList = IntegerArrayUtilities.convertArrayIntList(fromNewStart);
+
+        return returnList;
     }
 
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
