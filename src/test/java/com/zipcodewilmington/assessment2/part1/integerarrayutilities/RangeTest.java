@@ -29,18 +29,9 @@ public class RangeTest {
     public void test3() {
         int start = 5;
         int stop = 10;
-        Integer[] expected = {5,6,7,8,8,10};
+        Integer[] expected = {5,6,7,8,8,9,10};
         test(start, stop, expected);
     }
-
-    @Test
-    public void test4() {
-        int start = 10;
-        int stop = 0;
-        Integer[] expected = null;
-        test(start, stop, expected);
-    }
-
 
 
     private void test(int start, int stop, Integer[] expected) {

@@ -1,13 +1,8 @@
 package com.zipcodewilmington.assessment2.part2.router;
 
 import com.zipcodewilmington.assessment2.part2.Router;
-import javafx.util.Pair;
 import org.junit.Assert;
 import org.junit.Test;
-
-import javax.naming.CompoundName;
-import java.util.Arrays;
-import java.util.List;
 
 public class SizeTest {
 
@@ -54,5 +49,32 @@ public class SizeTest {
 
         // then
         Assert.assertEquals(expectedSize, actualSize);
+    }
+
+
+
+
+
+
+
+
+
+
+    class Pair<KeyType, ValueTyp> {
+        private KeyType key;
+        private ValueTyp value;
+
+        public Pair(KeyType key, ValueTyp value) {
+            this.key = key;
+            this.value = value;
+        }
+
+        public KeyType getKey() {
+            return key;
+        }
+
+        public ValueTyp getValue() {
+            return value;
+        }
     }
 }
