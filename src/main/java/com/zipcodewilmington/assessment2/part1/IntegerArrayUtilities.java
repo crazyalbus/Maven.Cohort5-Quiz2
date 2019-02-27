@@ -1,9 +1,8 @@
 package com.zipcodewilmington.assessment2.part1;
 
-import java.util.Spliterator;
+import java.util.ArrayList;
+import java.util.List;
 
-import static java.util.Arrays.copyOfRange;
-import static java.util.Arrays.spliterator;
 
 public class IntegerArrayUtilities{
 
@@ -14,13 +13,20 @@ public class IntegerArrayUtilities{
     }
 
     public Integer[] range(int start, int stop) {
-        Integer[] tempArray = new Integer[stop + 2];
+//        List<Integer> rangeArray = new ArrayList<>();
+//
+//        for (int i = start; i <= stop ; i++) {
+//            rangeArray.add(start);
+//        }
+//
+////        Integer[] rangeArray = new Integer[Math.abs((start - stop) + 1)];
+////
+////        for (int i = 1; i <= stop + 1 ; i++) {
+////            tempArray[i] = i;
+////        }
+//        Integer[] rangeToReturn = rangeArray.toArray();
 
-        for (int i = 1; i <= stop + 1 ; i++) {
-            tempArray[i] = i;
-        }
-
-        return copyOfRange(tempArray, start, stop + 1);
+        return null;
     }
 
     public Integer getSumOfFirstTwo(Integer[] arrayToTest) {
