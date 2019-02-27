@@ -44,9 +44,9 @@ public class AddTest {
 
         // when
         router.add(expectedPath, controller);
-        String actualPath = router.getController(controller);
+        String actualController = router.getController(expectedPath);
 
         // then
-        Assert.assertEquals(expectedPath, actualPath);
+        Assert.assertEquals(controller, actualController);
     }
 }
