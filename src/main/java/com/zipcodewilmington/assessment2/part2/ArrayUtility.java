@@ -39,8 +39,23 @@ public class ArrayUtility {
     }
 
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
-        return null;
+        Integer masterCounter = countOccurrenceTool(array1, valueToEvaluate) + countOccurrenceTool(array2, valueToEvaluate);
+
+        return masterCounter;
     }
+
+    public static Integer countOccurrenceTool(Integer[] array, Integer valueToEvaluate) {
+        Integer counter = 0;
+
+        for (Integer num: array
+             ) {
+            if(num == valueToEvaluate) {
+                counter++;
+            }
+        }
+        return counter;
+    }
+
 
     public Integer mostCommon(Integer[] array) {
         return null;
