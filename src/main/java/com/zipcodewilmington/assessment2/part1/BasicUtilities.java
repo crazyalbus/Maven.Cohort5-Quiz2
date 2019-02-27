@@ -5,7 +5,7 @@ public class BasicUtilities {
     String stringToTest;
     Character letterToTest;
 
-    public BasicUtilities(Integer numberToTest) {
+    public BasicUtilities() {
         this.numberToTest = numberToTest;
     }
 
@@ -14,14 +14,14 @@ public class BasicUtilities {
         this.letterToTest = letterToTest;
     }
 
-    public Boolean isGreaterThan5(Integer value) {
+    public Boolean isGreaterThan5(Integer numberToTest) {
 
-        return numberToTest > 5;
+        return numberToTest >= 5;
     }
 
-    public Boolean isLessThan7(Integer value) {
+    public Boolean isLessThan7(Integer numberToTest) {
 
-        return numberToTest < 7;
+        return numberToTest <= 7;
     }
 
     public Boolean isBetween5And7(Integer valueToEvaluate) {
@@ -29,9 +29,9 @@ public class BasicUtilities {
         return isGreaterThan5(valueToEvaluate) && isLessThan7(valueToEvaluate);
     }
 
-    public Boolean startsWith(String string, Character character) {
+    public Boolean startsWith(String stringToTest, Character letterToTest) {
 
-        return stringToTest.substring(0,1).equals(letterToTest.toString());
+        return stringToTest.substring(0,1).equalsIgnoreCase(letterToTest.toString());
     }
 }
 
