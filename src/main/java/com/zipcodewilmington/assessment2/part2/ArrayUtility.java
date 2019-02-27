@@ -1,6 +1,7 @@
 package com.zipcodewilmington.assessment2.part2;
 
 import com.j256.ormlite.stmt.query.In;
+import com.zipcodewilmington.assessment2.part1.IntegerArrayUtilities;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,9 +16,9 @@ public class ArrayUtility {
 
         newList.addAll(newArray1);
         newList.addAll(newArray2);
-        newList.toArray();
+        Integer[] returnList = IntegerArrayUtilities.convertArrayIntList(newList);
 
-        return null;
+        return returnList;
     }
 
     public Integer[] rotate(Integer[] array, Integer index) {

@@ -19,14 +19,22 @@ public class IntegerArrayUtilities{
             rangeArray.add(i);
         }
 
-        Integer[] rangeToReturn = new Integer[rangeArray.size()];
+        Integer[] convertRange = convertArrayIntList(rangeArray);
 
-        for (int j = 0; j < rangeArray.size(); j++) {
-            rangeToReturn[j] = rangeArray.get(j);
-        }
-
-        return rangeToReturn;
+        return convertRange;
     }
+
+    public static Integer[] convertArrayIntList(List<Integer> array) {
+        Integer[] intArray = new Integer[array.size()];
+
+        for (int i = 0; i < array.size(); i++) {
+            intArray[i] = array.get(i);
+        }
+        return intArray;
+
+    }
+
+
 
     public Integer getSumOfFirstTwo(Integer[] arrayToTest) {
 
