@@ -24,7 +24,7 @@ public class IntegerArrayUtilities{
 ////        for (int i = 1; i <= stop + 1 ; i++) {
 ////            tempArray[i] = i;
 ////        }
-//        Integer[] rangeToReturn = rangeArray.toArray();
+//        Integer[] rangeToReturn = (Integer[]) rangeArray.toArray();
 
         return null;
     }
