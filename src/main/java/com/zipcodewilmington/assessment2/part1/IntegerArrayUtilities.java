@@ -19,22 +19,8 @@ public class IntegerArrayUtilities{
             rangeArray.add(i);
         }
 
-        Integer[] convertRange = convertArrayIntList(rangeArray);
-
-        return convertRange;
+        return rangeArray.toArray(new Integer[rangeArray.size()]);
     }
-
-    public static Integer[] convertArrayIntList(List<Integer> array) {
-        Integer[] intArray = new Integer[array.size()];
-
-        for (int i = 0; i < array.size(); i++) {
-            intArray[i] = array.get(i);
-        }
-        return intArray;
-
-    }
-
-
 
     public Integer getSumOfFirstTwo(Integer[] arrayToTest) {
 
@@ -45,5 +31,4 @@ public class IntegerArrayUtilities{
 
         return arrayToTest[0] * arrayToTest[1];
     }
-
 }

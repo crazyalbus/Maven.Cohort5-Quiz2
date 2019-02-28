@@ -1,29 +1,67 @@
 package com.zipcodewilmington.assessment2.part2;
 
+
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class ListUtility {
+    List<Integer> list;
+
+    public ListUtility() {
+        list = new ArrayList();
+    }
+
+
+
     public Boolean add(int i) {
-        return null;
+
+        return list.add(i);
+
     }
 
     public Integer size() {
-        return null;
+
+        return list.size();
     }
 
     public List<Integer> getUnique() {
-        return null;
+
+        List<Integer> unique = new ArrayList<>();
+
+        Integer currentNumber = -1;
+        for ( Integer n: list
+             ) {
+            if (n > currentNumber) {
+                unique.add(n);
+                currentNumber = n;
+            }
+        }
+        return unique;
     }
 
     public String join() {
-        return null;
+        String joinedNumbers = "";
+
+        for (Integer n : list
+             ) {
+            joinedNumbers = joinedNumbers + n.toString() + ", ";
+        }
+
+        return joinedNumbers.substring(0, joinedNumbers.length() - 2);
     }
 
     public Integer mostCommon() {
-        return null;
+
+        Integer[] listAsArray = list.toArray( new Integer[list.size()]);
+
+        return ArrayUtility.mostCommon(listAsArray);
     }
 
+
+
     public Boolean contains(Integer valueToAdd) {
-        return null;
+
+        return list.contains(valueToAdd);
     }
 }
