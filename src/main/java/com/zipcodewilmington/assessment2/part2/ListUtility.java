@@ -2,7 +2,7 @@ package com.zipcodewilmington.assessment2.part2;
 
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Collections;
 import java.util.List;
 
 public class ListUtility {
@@ -29,14 +29,13 @@ public class ListUtility {
 
         List<Integer> unique = new ArrayList<>();
 
-        Integer currentNumber = -1;
-        for ( Integer n: list
+        for (Integer n: list
              ) {
-            if (n > currentNumber) {
+            if(Collections.frequency(unique, n) < 1) {
                 unique.add(n);
-                currentNumber = n;
             }
         }
+
         return unique;
     }
 

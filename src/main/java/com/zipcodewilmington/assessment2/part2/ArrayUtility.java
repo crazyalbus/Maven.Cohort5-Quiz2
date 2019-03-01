@@ -1,7 +1,6 @@
 package com.zipcodewilmington.assessment2.part2;
 
 import com.j256.ormlite.stmt.query.In;
-import com.zipcodewilmington.assessment2.part1.IntegerArrayUtilities;
 
 import java.util.*;
 
