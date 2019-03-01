@@ -7,82 +7,48 @@ import java.util.*;
 
 public class ArrayUtility {
     public Integer[] merge(Integer[] array1, Integer[] array2) {
-        List<Integer> newArray1 = Arrays.asList(array1);
-        List<Integer> newArray2 = Arrays.asList(array2);
+        List<Integer> newArray = new ArrayList<>(Arrays.asList(array1));
 
-        List<Integer> newList = new ArrayList<>();
+        newArray.addAll(Arrays.asList(array2));
 
-        newList.addAll(newArray1);
-        newList.addAll(newArray2);
-
-        return newList.toArray(new Integer[newList.size()]);
+        return newArray.toArray(new Integer[newArray.size()]);
     }
+
 
     public Integer[] rotate(Integer[] array, Integer index) {
 
-        List<Integer> fromNewStart = new ArrayList<Integer>();
+        List<Integer> toRotate = Arrays.asList(array);
 
-        for (int i = index; i < array.length; i++) {
-            fromNewStart.add(array[i]);
-        }
+        Collections.rotate(toRotate, toRotate.size() - index);
 
-        for (int i = 0; i < index; i++) {
-            fromNewStart.add(array[i]);
-        }
-
-        return fromNewStart.toArray(new Integer[fromNewStart.size()]);
+        return toRotate.toArray(new Integer[toRotate.size()]);
     }
+
 
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
-        Integer masterCounter = countOccurrenceTool(array1, valueToEvaluate) + countOccurrenceTool(array2, valueToEvaluate);
 
-        return masterCounter;
-    }
+        Collection arrayAsCollection = Arrays.asList(merge(array1, array2));
 
-    public static Integer countOccurrenceTool(Integer[] array, Integer valueToEvaluate) {
-        Integer counter = 0;
-
-        for (Integer num: array
-             ) {
-            if(num == valueToEvaluate) {
-                counter++;
-            }
-        }
-        return counter;
+        return Collections.frequency(arrayAsCollection, valueToEvaluate);
     }
 
 
     public static Integer mostCommon(Integer[] array) {
 
-        HashMap count = intArrayToHashMap(array);
+        Collection arrayAsCollection = Arrays.asList(array);
 
-        Integer mostCommonCount = 0;
+        int mostCommonCount = 0;
         Integer mostCommon = 0;
 
         for (Integer n : array
              ) {
-            if((Integer) count.get(n) > mostCommonCount) {
+            if((Collections.frequency(arrayAsCollection, n) > mostCommonCount)) {
                 mostCommon = n;
                 mostCommonCount ++;
             }
         }
         return mostCommon;
     }
-
-    public static HashMap intArrayToHashMap(Object[] array) {
-        HashMap count = new HashMap();
-        for (Object n : array
-        ) {
-            if (!count.containsKey(n)) {
-                count.put(n, 1);
-            } else {
-                Integer value = (Integer) count.get(n);
-                count.replace(n, value + 1);
-            }
-        }
-        return count;
-    }
-
 
 }
 

@@ -14,7 +14,7 @@ public class ListUtility {
 
 
 
-    public Boolean add(int i) {
+    public Boolean add(Integer i) {
 
         return list.add(i);
 
